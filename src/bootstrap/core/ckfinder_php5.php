@@ -11,7 +11,7 @@
  * this file is part of the Source Code of CKFinder.
  */
 
-define( 'CKFINDER_DEFAULT_BASEPATH', '/ckfinder/' ) ;
+define( 'CKFINDER_DEFAULT_BASEPATH', '/finder/ckfinder.html' ) ;
 
 class CKFinder
 {
@@ -56,7 +56,6 @@ class CKFinder
 		$id = $this->Id ;
 		if ( !empty( $id ) )
 			$id = ' id="' . $id . '"' ;
-
 		return '<iframe src="' . $this->_BuildUrl() . '" width="' . $this->Width . '" ' .
 			'height="' . $this->Height . '"' . $className . $id . ' frameborder="0" scrolling="no"></iframe>' ;
 	}
@@ -182,6 +181,7 @@ class CKFinder
 		$editorObj->Config['LinkUploadURL'] = $dir . urlencode( 'core/connector/php/connector.php?command=QuickUpload&type=Files' ) ;
 		$editorObj->Config['ImageUploadURL'] = $dir . urlencode( 'core/connector/php/connector.php?command=QuickUpload&type=') . ( empty( $imageType ) ? 'Images' : $imageType ) ;
 		$editorObj->Config['FlashUploadURL'] = $dir . urlencode( 'core/connector/php/connector.php?command=QuickUpload&type=') . ( empty( $flashType ) ? 'Flash' : $flashType ) ;
+
 	}
 
 	// Static "SetupCKEditor".
@@ -227,5 +227,6 @@ class CKFinder
 		$editorObj->config['filebrowserUploadUrl'] = $dir . 'core/connector/php/connector.php?command=QuickUpload&type=Files' ;
 		$editorObj->config['filebrowserImageUploadUrl'] = $dir . 'core/connector/php/connector.php?command=QuickUpload&type=' . ( empty( $imageType ) ? 'Images' : $imageType ) ;
 		$editorObj->config['filebrowserFlashUploadUrl'] = $dir . 'core/connector/php/connector.php?command=QuickUpload&type=' . ( empty( $flashType ) ? 'Flash' : $flashType ) ;
+
 	}
 }

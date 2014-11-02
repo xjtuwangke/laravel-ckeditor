@@ -83,7 +83,7 @@ ATTENTION: The trailing slash is required.
 $baseDir = rtrim( public_path( 'upload/' . \Config::get('laravel-ckeditor::config.path') ) , '/' ) . '/';
 
 if( ! \File::isDirectory( $baseDir ) ){
-	\File::makeDirectory( $baseDir , 777 );
+	\File::makeDirectory( $baseDir , 0777 );
 }
 
 /*
@@ -338,3 +338,5 @@ include_once "plugins/zip/plugin.php";
 $config['plugin_imageresize']['smallThumb'] = '90x90';
 $config['plugin_imageresize']['mediumThumb'] = '120x120';
 $config['plugin_imageresize']['largeThumb'] = '180x180';
+
+\Config::set( 'laravel-ckeditor::finder_config' , $config );

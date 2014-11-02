@@ -22,4 +22,8 @@ class CKFinderController extends \Controller{
     public function finder_html(){
         return \View::make( 'laravel-ckeditor::finder_html' );
     }
+
+    public function connector(){
+        include __DIR__ . '/../../../bootstrap/core/connector/php/connector.php';
+    }
 }

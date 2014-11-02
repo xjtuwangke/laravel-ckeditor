@@ -100,6 +100,7 @@ class CKFinder_Connector_CommandHandler_CommandHandlerBase
         $_resourceTypeConfig = $this->_currentFolder->getResourceTypeConfig();
 
         if (is_null($_resourceTypeConfig)) {
+            \Log::debug( 'here' , [ $_resourceTypeConfig ] );
             $this->_errorHandler->throwError(CKFINDER_CONNECTOR_ERROR_INVALID_TYPE);
         }
 

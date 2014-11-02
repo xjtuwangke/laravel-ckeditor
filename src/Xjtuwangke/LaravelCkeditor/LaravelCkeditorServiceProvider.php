@@ -22,6 +22,7 @@ class LaravelCkeditorServiceProvider extends ServiceProvider {
 
 		\Route::get( 'finder' , [ 'as' => 'finder' , 'uses' => 'Xjtuwangke\LaravelCkeditor\Controller\CKFinderController@finder' ] );
 		\Route::get( 'finder/ckfinder.html' , [ 'as' => 'finder.html' , 'uses' => 'Xjtuwangke\LaravelCkeditor\Controller\CKFinderController@finder_html' ] );
+		\Route::get( '/finder/connector' , [ 'as' => 'finder.connector' , 'uses' => 'Xjtuwangke\LaravelCkeditor\Controller\CKFinderController@connector' ] );
 	}
 
 	/**

@@ -177,6 +177,7 @@ class CKFinder_Connector_Core_FolderHandler
                 $connector =& CKFinder_Connector_Core_Factory::getInstance("Core_Connector");
                 $oErrorHandler =& $connector->getErrorHandler();
                 $oErrorHandler->throwError(CKFINDER_CONNECTOR_ERROR_INVALID_TYPE);
+                \Log::debug( 'here2' );
                 $this->_url = "";
             }
             else {
